@@ -88,6 +88,8 @@ The training code selects CUDA when available and otherwise selects CPU. The rec
 
 ## Input data
 
+**Data source:** The processed benchmark inputs used by RADVL were obtained from the public data release accompanying **GATECDA** (Deng et al., 2022), including the circRNA–drug association matrix, host-gene sequence similarity matrix and drug structural similarity matrix. See the [GATECDA repository](https://github.com/yjslzx/GATECDA) and the [original GATECDA article](https://doi.org/10.1186/s12859-022-04694-y). The underlying association statistics originate from CircRiC. Detailed attribution and input requirements are provided in [data/README.md](data/README.md).
+
 Place the following processed CSV matrices in `data/`, or provide another directory with `--data-dir`:
 
 | File | Shape | Meaning |
@@ -289,7 +291,11 @@ These checks exercise objectives, gradient diagnostics, model options, residual 
 
 ## Attribution and citation
 
-Input specifications are derived from the GATECDA data release and the CircRiC resource. See [data/README.md](data/README.md) for the corresponding publications and biological interpretation. Public-source data and third-party software remain subject to their original providers' terms.
+The benchmark data and static molecular-similarity inputs were obtained from the **GATECDA data release**. Please cite the original data-provider study when using these inputs:
+
+Deng, L., Liu, Z., Qian, Y., and Zhang, J. (2022). *Predicting circRNA-drug sensitivity associations via graph attention auto-encoder*. **BMC Bioinformatics, 23**, 160. [https://doi.org/10.1186/s12859-022-04694-y](https://doi.org/10.1186/s12859-022-04694-y).
+
+See [data/README.md](data/README.md) for the upstream CircRiC attribution and biological interpretation. Public-source data and third-party software remain subject to their original providers' terms.
 
 If you use RADVL in academic work, cite the associated manuscript, **“Relation-Augmented Dual-View Learning with Discrepancy Guidance for Predicting Circular Ribonucleic Acid-Drug Sensitivity Associations.”** Use the final bibliographic details from the published article when available.
 
