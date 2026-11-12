@@ -1,0 +1,348 @@
+{
+  "entry": "radvl.train_entry",
+  "public_model": "radvl.model.RADVL",
+  "local_dependencies": {
+    "radvl.attention_layers": [
+      "radvl.regularization_utils"
+    ],
+    "radvl.data_dataset": [],
+    "radvl.data_loading": [],
+    "radvl.data_preprocessing": [],
+    "radvl.data_protocol": [],
+    "radvl.encoder_layers": [],
+    "radvl.features": [
+      "radvl.feature_inputs"
+    ],
+    "radvl.features_similarity": [
+      "radvl.feature_inputs",
+      "radvl.features",
+      "radvl.hypergraph_weighting"
+    ],
+    "radvl.feature_inputs": [
+      "radvl.data_preprocessing",
+      "radvl.data_protocol",
+      "radvl.hypergraph",
+      "radvl.training_isolation"
+    ],
+    "radvl.gradient_diagnostics": [],
+    "radvl.graph_layers": [
+      "radvl.loss_utils"
+    ],
+    "radvl.hypergraph": [
+      "radvl.hypergraph_clustering",
+      "radvl.hypergraph_neighbors"
+    ],
+    "radvl.hypergraph_clustering": [],
+    "radvl.hypergraph_neighbors": [],
+    "radvl.hypergraph_weighting": [
+      "radvl.features"
+    ],
+    "radvl.loss_utils": [
+      "radvl.settings_base"
+    ],
+    "radvl.metrics": [],
+    "radvl.model": [],
+    "radvl.model_backbone": [
+      "radvl.encoder_layers",
+      "radvl.graph_layers"
+    ],
+    "radvl.model_balanced": [
+      "radvl.model_residual"
+    ],
+    "radvl.model_components": [
+      "radvl.attention_layers",
+      "radvl.encoder_layers"
+    ],
+    "radvl.model_core": [
+      "radvl.model_components",
+      "radvl.model_fusion",
+      "radvl.objectives"
+    ],
+    "radvl.model_fusion": [
+      "radvl.model_components"
+    ],
+    "radvl.model_options": [
+      "radvl.protocol_audit",
+      "radvl.training_relation_gating"
+    ],
+    "radvl.model_reference": [
+      "radvl.objectives_reference"
+    ],
+    "radvl.model_residual": [
+      "radvl.model_similarity"
+    ],
+    "radvl.model_similarity": [
+      "radvl.model_components",
+      "radvl.objectives"
+    ],
+    "radvl.model_variants": [
+      "radvl.model_balanced"
+    ],
+    "radvl.objectives": [],
+    "radvl.objectives_alignment": [],
+    "radvl.objectives_balanced": [
+      "radvl.objectives"
+    ],
+    "radvl.objectives_pair_scaling": [
+      "radvl.objectives"
+    ],
+    "radvl.objectives_reference": [],
+    "radvl.objectives_variants": [
+      "radvl.objectives"
+    ],
+    "radvl.optimization": [],
+    "radvl.protocol_adapter": [
+      "radvl.data_protocol"
+    ],
+    "radvl.protocol_audit": [
+      "radvl.data_protocol"
+    ],
+    "radvl.protocol_metrics": [
+      "radvl.data_protocol",
+      "radvl.optimization"
+    ],
+    "radvl.recorder_balanced": [
+      "radvl.data_protocol",
+      "radvl.recorder_residual"
+    ],
+    "radvl.recorder_base": [],
+    "radvl.recorder_diagnostics": [
+      "radvl.data_protocol",
+      "radvl.gradient_diagnostics",
+      "radvl.recorder_balanced",
+      "radvl.recorder_base"
+    ],
+    "radvl.recorder_fusion": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_protocol"
+    ],
+    "radvl.recorder_isolation": [
+      "radvl.recorder_base",
+      "radvl.recorder_metadata"
+    ],
+    "radvl.recorder_metadata": [
+      "radvl.recorder_base"
+    ],
+    "radvl.recorder_model": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_stopping"
+    ],
+    "radvl.recorder_protocol": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_isolation"
+    ],
+    "radvl.recorder_residual": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_similarity"
+    ],
+    "radvl.recorder_similarity": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_model"
+    ],
+    "radvl.recorder_stopping": [
+      "radvl.data_protocol",
+      "radvl.recorder_base",
+      "radvl.recorder_fusion"
+    ],
+    "radvl.recorder_variants": [
+      "radvl.data_protocol",
+      "radvl.recorder_diagnostics"
+    ],
+    "radvl.regularization_utils": [],
+    "radvl.settings_base": [],
+    "radvl.settings_fusion": [],
+    "radvl.settings_isolation": [],
+    "radvl.settings_model": [],
+    "radvl.settings_protocol": [],
+    "radvl.settings_recording": [],
+    "radvl.settings_reference": [],
+    "radvl.settings_residual": [],
+    "radvl.settings_similarity": [],
+    "radvl.settings_stopping": [],
+    "radvl.settings_variants": [],
+    "radvl.training_audit": [
+      "radvl.gradient_diagnostics",
+      "radvl.recorder_diagnostics",
+      "radvl.settings_residual",
+      "radvl.training_balanced",
+      "radvl.training_core"
+    ],
+    "radvl.training_balanced": [
+      "radvl.model_balanced",
+      "radvl.objectives_balanced",
+      "radvl.recorder_balanced",
+      "radvl.settings_residual",
+      "radvl.training_core",
+      "radvl.training_weighted"
+    ],
+    "radvl.training_calibration": [
+      "radvl.features",
+      "radvl.optimization",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.training_core",
+      "radvl.training_negative_sampling"
+    ],
+    "radvl.training_context": [
+      "radvl.training_token_attention"
+    ],
+    "radvl.training_core": [
+      "radvl.data_protocol",
+      "radvl.features",
+      "radvl.model_core",
+      "radvl.objectives",
+      "radvl.optimization",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.recorder_model",
+      "radvl.settings_model"
+    ],
+    "radvl.training_cross_validation": [
+      "radvl.training_rah"
+    ],
+    "radvl.training_discrepancy": [
+      "radvl.training_rah"
+    ],
+    "radvl.training_early_stopping": [
+      "radvl.data_protocol",
+      "radvl.feature_inputs",
+      "radvl.model_fusion",
+      "radvl.optimization",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.recorder_stopping",
+      "radvl.regularization_utils",
+      "radvl.settings_stopping"
+    ],
+    "radvl.training_fixed_pairs": [
+      "radvl.training_calibration"
+    ],
+    "radvl.training_fusion": [
+      "radvl.data_protocol",
+      "radvl.feature_inputs",
+      "radvl.model_fusion",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_fusion",
+      "radvl.recorder_metadata",
+      "radvl.regularization_utils",
+      "radvl.settings_fusion"
+    ],
+    "radvl.training_isolation": [
+      "radvl.data_preprocessing",
+      "radvl.hypergraph",
+      "radvl.model_components",
+      "radvl.recorder_base",
+      "radvl.recorder_isolation",
+      "radvl.recorder_metadata",
+      "radvl.regularization_utils",
+      "radvl.settings_isolation"
+    ],
+    "radvl.training_masking": [
+      "radvl.training_context"
+    ],
+    "radvl.training_negative_sampling": [
+      "radvl.training_variants"
+    ],
+    "radvl.training_protocol": [
+      "radvl.data_protocol",
+      "radvl.feature_inputs",
+      "radvl.model_components",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.recorder_protocol",
+      "radvl.regularization_utils",
+      "radvl.settings_protocol"
+    ],
+    "radvl.training_rah": [
+      "radvl.training_fixed_pairs"
+    ],
+    "radvl.training_readout": [
+      "radvl.optimization",
+      "radvl.recorder_base",
+      "radvl.training_core",
+      "radvl.training_variance"
+    ],
+    "radvl.training_recording": [
+      "radvl.data_dataset",
+      "radvl.data_loading",
+      "radvl.hypergraph",
+      "radvl.metrics",
+      "radvl.model_components",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.regularization_utils",
+      "radvl.settings_recording"
+    ],
+    "radvl.training_reference": [
+      "radvl.data_dataset",
+      "radvl.data_loading",
+      "radvl.hypergraph",
+      "radvl.metrics",
+      "radvl.model_reference",
+      "radvl.objectives_reference",
+      "radvl.recorder_base",
+      "radvl.settings_reference"
+    ],
+    "radvl.training_relations": [
+      "radvl.training_masking"
+    ],
+    "radvl.training_relation_gating": [
+      "radvl.recorder_base",
+      "radvl.training_relations"
+    ],
+    "radvl.training_residual": [
+      "radvl.model_residual",
+      "radvl.recorder_residual",
+      "radvl.settings_residual",
+      "radvl.training_weighted"
+    ],
+    "radvl.training_token_attention": [
+      "radvl.training_readout"
+    ],
+    "radvl.training_variance": [
+      "radvl.feature_inputs",
+      "radvl.training_discrepancy"
+    ],
+    "radvl.training_variants": [
+      "radvl.gradient_diagnostics",
+      "radvl.model_variants",
+      "radvl.objectives_alignment",
+      "radvl.objectives_variants",
+      "radvl.recorder_variants",
+      "radvl.settings_variants",
+      "radvl.training_audit",
+      "radvl.training_core"
+    ],
+    "radvl.training_weighted": [
+      "radvl.data_protocol",
+      "radvl.features_similarity",
+      "radvl.model_similarity",
+      "radvl.optimization",
+      "radvl.protocol_adapter",
+      "radvl.recorder_base",
+      "radvl.recorder_metadata",
+      "radvl.recorder_similarity",
+      "radvl.settings_similarity",
+      "radvl.training_core"
+    ],
+    "radvl.train_entry": [
+      "radvl.model",
+      "radvl.model_options",
+      "radvl.training_cross_validation",
+      "radvl.training_relation_gating"
+    ],
+    "radvl.__init__": [
+      "radvl.model"
+    ]
+  }
+}

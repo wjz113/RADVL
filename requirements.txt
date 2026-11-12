@@ -1,0 +1,12 @@
+# Numeric versions recorded in the reference-model run.
+numpy==1.23.5
+pandas==2.0.3
+scipy==1.10.1
+scikit-learn==1.3.2
+torch==1.13.0
+torch-geometric==2.6.1
+# torch-sparse requires a wheel compatible with PyTorch and CUDA; see README.
+matplotlib
+networkx
+psutil
+tqdm
